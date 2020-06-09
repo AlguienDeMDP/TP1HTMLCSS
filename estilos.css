@@ -1,0 +1,145 @@
+:root {
+    --subtle-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background: #212121;
+    padding: 2px;
+}
+
+
+header {
+    color: deepskyblue;
+    text-align: center;
+    background: #323232;
+    border-radius: 0.5em;
+    padding: 1px;
+}
+
+nav {   /* Menú */
+    overflow: hidden;
+    background-color: #0D7377;
+    border-radius: 0 0 0.5em 0.5em;
+    display: flex;
+}
+
+nav >a{ /*Botones de menú*/
+    width: auto;
+    color: black;
+    text-align: center;
+    padding: 1em 2em;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.acceder{
+    margin-left: auto;
+    
+}
+
+nav > a:hover{
+    background-color: #14FFEC;
+}
+/* FLEX LAYOUT */
+.container {
+    display: flex;
+}
+
+.leftcolumn {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.centercolumn {
+    flex: 3;
+}
+
+.rightcolumn {
+    flex: 1;
+    padding-left: 20px;
+}
+
+
+
+
+.post-title{
+
+    padding: 0.5em;
+    font-size: 2em;
+    color: white;
+}
+
+.post-user{
+    color: grey;
+}
+
+.responsive-img{
+    background-color: #aaa;
+    width: 100%;
+}
+
+.search{
+    flex: 1;
+    background-color: #323232;
+    border-radius: 0.5em;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: var(--subtle-shadow);
+}
+
+.search > input{
+    align-content: center;
+    background-color: #0D7377;
+    border-radius: 0.2em;
+    width: 70%;
+}
+
+
+.toppost{
+flex: 1;
+background-color: #323232;
+border-radius: 0.5em;
+padding: 20px;
+margin-top: 20px;
+margin-left: 5px;
+text-decoration: none;
+
+
+}
+
+.comentarios{
+    flex: 1;
+    background-color: #323232;
+    border-radius: 0.5em;
+    padding: 20px;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+    .rightcolumn {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+    .login-link {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    nav {
+        flex-direction: column;
+    }
+    .login-link {
+        margin: 0;
+    }
+}
